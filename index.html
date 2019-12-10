@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang='en'>
+
 <head>
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
@@ -13,21 +14,33 @@
 <body>
     <header class='header-container'>
         <img class='nyt-logo' src='./img/nyt-logo.svg' alt='logo'>
-        <p class='header-text'>Choose a section:</p>
-        <select class='header-dropdown-menu'>
-            <option value="none"></option>
-            <option value=""></option>
-            <option value=""></option>
-            <option value=""></option>
-        </select>
+        <div class='content'>
+            <p class='header-text'>Choose a section:</p>
+            <select class='header-dropdown-menu'>
+                <a href='#'>
+                    <option value="none">Sections</option>
+                </a>
+                <a href='#'>
+                    <option value=""></option>
+                </a>
+                <a href='#'>
+                    <option value=""></option>
+                </a>
+                <a href='#'>
+                    <option value=""></option>
+                </a>
+            </select>
+        </div>
     </header>
 
     <footer class='footer-copyright-container'>
         <p class="footer-text">&copy; Copyright 2016 INSTANEWS</p>
     </footer>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="./build/js/test.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

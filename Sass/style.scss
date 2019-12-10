@@ -1,13 +1,11 @@
+
 $font: 'Open Sans', Arial, Helvetica, sans-serif;
-$fontSize: 16px;
+$fontSize: 1.6rem;
 $widths: 100%;
 $desktopSize: 1240px;
 $tabletSize: 600px;
 
 
-html {
-    // background-color: black;
-}
 
 
 @mixin desktop {
@@ -22,6 +20,11 @@ html {
     }
 }
 
+html {
+    font-size: 62.5%;
+    background-color: black;
+}
+
 
 .header-container {
     
@@ -30,16 +33,17 @@ html {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height:300px;
+    height: 500px;
 
     @include desktop {
-        display: flex;
         flex-direction: row;
         justify-content: flex-start;
-        height:500px;
         width: $widths;
-        background-color: black;
     }
+    @include tablet {
+        flex-direction: row;
+    }
+
 
     .nyt-logo {
         margin: 100px 0px 20px 0px ;
@@ -50,20 +54,23 @@ html {
     
     .header-text {
         font-family: $font;
-        margin-bottom: 20px;
+        margin-bottom: 2rem;
+        // margin-left:1.5rem;
         color: white;  
         @include desktop {
              font-size: $fontSize;
             color:white;
         }
+
     }
 
     .header-dropdown-menu {
         border: none;
-        padding: 5px 50px 5px 50px;
+        padding: 5px 30px 5px 30px;
         border-radius: 5px;
+        outline: 0;
         @include desktop {
-             padding: 2px 30px 2px 30px;
+             padding: 2px 60px 2px 60px;
         }
     }
 }
@@ -71,7 +78,6 @@ html {
 
 .footer-copyright-container {
     
-    height:160px;
     background-color: black;
     display: flex;
     justify-content: center;
@@ -80,18 +86,14 @@ html {
     
     .footer-text {
         font-family: $font;
-        margin: 20px;
-        font-family: $font;
-        font-size: $fontSize;
+        margin: 2rem;
+        font-size: 1.2rem;
         color:#c2c2c2;
         @include desktop {
-            // margin: 20px 0px 0px 30px;
-            height: 100px;
-            // align-items: center;
-            width: $widths;
-            display: flex;
-            background-color: black;
-            
+            width: $widths;   
+        }
+        @include tablet {
+            font-size: 1rem;
         }   
     }
 }
