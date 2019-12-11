@@ -1,9 +1,4 @@
-
-$font: 'Open Sans', Arial, Helvetica, sans-serif;
-$fontSize: 1.6rem;
-$widths: 100%;
-$desktopSize: 1240px;
-$tabletSize: 600px;
+@import 'variables';
 
 
 
@@ -24,6 +19,15 @@ html {
     font-size: 62.5%;
     background-color: black;
 }
+
+
+
+a {
+    text-decoration: none;
+    color:white;
+
+}
+
 
 
 .header-container {
@@ -75,15 +79,40 @@ html {
 }
 
 
-
-.fail-message {
-    color:black;
-    font-size: 2rem;
+.loader-container {
+    display: flex;
+    justify-content: center;
 }
 
 
+.loader {
+    width: 3rem;
+}
 
-    
+.main-news {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 12;
+    height: 20rem;
+    background-size: cover;
+    position: relative;
+    background-repeat: no-repeat;
+    background-color: white;
+
+    @include desktop {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    @include tablet {
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+.caption {
+    position: absolute;
+
+}
+
+
 
 .footer-copyright-container {
     
