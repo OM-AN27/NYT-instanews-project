@@ -15,6 +15,9 @@
     }
 }
 
+
+
+
 html {
     font-size: 62.5%;
     background-color: black;
@@ -23,6 +26,7 @@ html {
 
 
 a {
+
     text-decoration: none;
     color:white;
 
@@ -31,6 +35,7 @@ a {
 
 
 .header-container {
+
     
     background-color: black;
     display: flex;
@@ -78,39 +83,61 @@ a {
     }
 }
 
+.header-animation {
+    transition: 1.5s all;
+    height: 25rem;
+    @include desktop {
+
+    }
+
+    .nyt-logo {
+        transition: 1.5s all;
+        height: 10rem;
+    }
+
+}
+
+// .caption {
+//     height: 10rem;
+//     background-color: rgba(0,0,0,0.8);
+// }
+
+
 
 .loader-container {
     display: flex;
     justify-content: center;
+
+    .loader {
+        width: 3rem;
+    }
 }
 
 
-.loader {
-    width: 3rem;
-}
 
-.main-news {
+main {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 12;
-    height: 20rem;
-    background-size: cover;
     position: relative;
-    background-repeat: no-repeat;
-    background-color: white;
-
-    @include desktop {
-        grid-template-columns: repeat(4, 1fr);
-    }
+    background-color: black;
+    
     @include tablet {
         grid-template-columns: repeat(3,1fr);
     }
+     @include desktop {
+    grid-template-columns: repeat(4, 1fr);
+     }
 }
 
-.caption {
-    position: absolute;
+.main-news {
+
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
 }
+
 
 
 
@@ -135,16 +162,6 @@ a {
         }   
     }
 }
-    
 
 
 
-
-
-// .top-stories-container {
-
-//     @include desktop {
-//         height: 445px;
-//         background-color: #ffffff;
-//     }
-// }
