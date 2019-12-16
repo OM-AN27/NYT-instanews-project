@@ -34,7 +34,7 @@ $(document).ready(function() {
         .done(function(data){
             $.each(data.results, function(key, value){
                 header.addClass('header-animation');
-                mainContent.append(`<section class='main-news' style='background-image: url(${value.multimedia[4]?value.multimedia[4].url: 'img/noPhotoLogo.jpg'});'><a href='${value.url}><div class='caption' style='background: rgba(0,0,0,0.7);'>${data.results[key].abstract}</div></a></section>`)
+                mainContent.append(`<section class='main-news' style='background-image: url(${value.multimedia[4]?value.multimedia[4].url: 'img/noPhotoLogo.jpg'});'><a href='${value.url}><div class='caption' style='background: rgba(0,0,0,0.7); padding: 10px;'>${data.results[key].abstract}</div></a></section>`)
             })
         }).fail(function(){
             alert('Failed to load, try again later');

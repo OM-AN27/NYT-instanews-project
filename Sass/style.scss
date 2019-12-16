@@ -134,17 +134,21 @@ main {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    font-family: 'montserrat',Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+    // border-radius: 20px;
+
 
     &:hover {
-        transform: scale(1.1); 
         transition: .5s all;
-        filter: brightness(0.8);
+        filter: brightness(0.9);
+        border-radius: 2rem;
+        transform: scale(1.1); 
     }
     
-    div {
-        transition:0.5s all;
-        transform: translateY(-1.1rem);
-    }
     
 }
 
