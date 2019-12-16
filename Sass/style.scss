@@ -32,6 +32,19 @@ a {
 
 }
 
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    position: relative;
+    background-color: black;
+    
+    @include tablet {
+        grid-template-columns: repeat(3,1fr);
+    }
+     @include desktop {
+    grid-template-columns: repeat(4, 1fr);
+     }
+}
 
 
 .header-container {
@@ -87,6 +100,7 @@ a {
     transition: 1.5s all;
     height: 25rem;
     @include desktop {
+        height: 15rem;
 
     }
 
@@ -97,10 +111,6 @@ a {
 
 }
 
-// .caption {
-//     height: 10rem;
-//     background-color: rgba(0,0,0,0.8);
-// }
 
 
 
@@ -115,28 +125,30 @@ a {
 
 
 
-main {
-    display: grid;
-    grid-template-columns: 1fr;
-    position: relative;
-    background-color: black;
-    
-    @include tablet {
-        grid-template-columns: repeat(3,1fr);
-    }
-     @include desktop {
-    grid-template-columns: repeat(4, 1fr);
-     }
-}
 
 .main-news {
-
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;;
     height: 50vh;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 
+    &:hover {
+        transform: scale(1.1); 
+        transition: .5s all;
+        filter: brightness(0.8);
+    }
+    
+    div {
+        transition:0.5s all;
+        transform: translateY(-1.1rem);
+    }
+    
 }
+
+
 
 
 

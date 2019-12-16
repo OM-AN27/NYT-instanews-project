@@ -1,17 +1,22 @@
-$(function() {
+$(document).ready(function() {
 
     
     const key = '?api-key=zYRIOfPzk9AGjtTQovI1AIrPU5QJ0d7l';
     const mainContent = $('main');
     const loading = $('.loader');
-    const header = $('header');
+    let header = $('header');
+    
+    loading.hide();
     
     $('select').on('change', function(){
         mainContent.html('');
-
+        
         if ($('select').val() === 'none') {
-        return
+            header.css('height', '31.25rem');
+            return
         } else {
+
+            loading.show();
         
         let nytUrl = 'https://api.nytimes.com/svc/topstories/v2/sports.json'  + key;
         event.preventDefault();
