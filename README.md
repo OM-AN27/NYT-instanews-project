@@ -12,4 +12,3 @@ How to implement AJAX and adding smooth animation using keyframes to my websites
 * New York Times API key
 * SCSS
 * AJAX
-* Keyframes
