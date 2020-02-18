@@ -1,4 +1,4 @@
-# PROJECT 3 - INSTANEWS
+# INSTANEWS
 
 # OVERVIEW
 One page website that fetches The New York Times Top Stories API and brings them to the website using AJAX.

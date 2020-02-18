@@ -1,12 +1,12 @@
 {
-  "name": "gulp-demo",
+  "name": "Instanews",
   "version": "1.0.0",
-  "description": "demo project gulp",
+  "description": "Website that fetches New York Times News API and displays to main page",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Omar Andoni Lomeli",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.26.7",

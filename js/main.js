@@ -32,10 +32,10 @@ $(document).ready(function() {
             loading.hide();
         })
         .done(function(data){
-            $.each(data.results, function(key, value){
                 header.addClass('header-animation');
-                mainContent.append(`<section class='main-news' style='background-image: url(${value.multimedia[4]?value.multimedia[4].url: 'img/noPhotoLogo.jpg'});'><a href='${value.url}><div class='caption' style='background: rgba(0,0,0,0.7); padding: 10px;'>${data.results[key].abstract}</div></a></section>`)
-            })
+            for (let i = 0; i < 12; i++) {
+                mainContent.append(`<section class='main-news' style="background-image:url(${data.results[i].multimedia[4]?data.results[i].multimedia[4].url: 'img/noPhotoLogo.jpg' });"> <a href='${data.results[i].url}'><div class='caption' style='background: rgba(0,0,0,0.7); padding: 10px;'>${data.results[i].abstract}</div></a></section>`);
+             }
         }).fail(function(){
             alert('Failed to load, try again later');
             
