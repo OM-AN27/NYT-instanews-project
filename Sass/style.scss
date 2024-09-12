@@ -169,6 +169,7 @@ main {
         margin: 2rem;
         font-size: 1.2rem;
         color:#c2c2c2;
+        text-align: center;
         @include desktop {
             width: $widths;   
         }
